@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +7,7 @@
     font-family: var(--main-font);
     font-size: var(--main-font-size);
     color: var(--main-text-color);
+    /* background-color: var(--main-bg-color-green); */
 }
 
 :root {
@@ -13,7 +16,7 @@
     --main-bg-color-orange: #FFBB64;
     --main-bg-color-yellow: #FFEAA7;
     --main-text-color: #333;
-    --main-font: 'Times New Roman ', sans-serif;
+    --main-font: 'Times New Roman', sans-serif;
     --main-font-size: px;
     --main-padding: 10px;
     --main-margin: 10px;
@@ -23,6 +26,180 @@
     --main-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+/* HEADER */
+/* Alinhar conteúdo do header ao centro vertical e horizontalmente */
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 10;
+}
+
+/* Deixar nav ul em linha dentro do header */
+nav ul {
+    list-style: none; /* remove os pontos da lista */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 30px;
+}
+
+/* deixar conteúdo das li's que ficam dentro da row ul em coluna e centralizada */
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.order img {
+    width: 18px;
+    height: 18px;
+}
+
+nav ul li a {
+    text-decoration: none; /* remove o sublinhado */
+    color: var(--main-text-color);
+    font-size: 0.9rem;
+}
+
+nav ul li a h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Inspiration', sans-serif;
+}
+
+/* MAIN HERO */
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    height: 280px;
+    border: var(--main-border);
+
+    position: relative;
+    z-index: 2;
+}
+
+.descriptionAndbtn {
+    display: relative;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.descriptionAndbtn p {
+    margin-top: 30px;
+    font-size: 1rem;
+    width: 300px;
+
+    position: absolute;
+    z-index: 3;
+}
+
+.btn_menu {
+    border-style: none;
+    background-color: var(--main-bg-color-green);
+    border-radius: var(--main-border-radius);
+    width: 130px;
+    padding: 2px;
+
+    position: absolute;
+    bottom: 82px;
+    /* margin-top: 156px; */
+}
+
+.img_hero_main {
+    border: var(--main-border);
+    width: 252px;
+    height: 300px;
+    bottom: 200px;
+}
+
+/* HOURS */
+.hours-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    padding-left: var(--main-padding);
+    padding-right: var(--main-padding);
+
+    position: relative;
+    z-index: 2;
+}
+
+/* BGS */
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10; /* Fica bem no fundo */
+}
+  
+  /* Cada faixa colorida ocupando parte da altura */
+.bgGreen {
+    height: 36vh;
+    background-color: var(--main-bg-color-green);
+}
+  
+.bgRed {
+    height: 40vh;
+    background-color: var(--main-bg-color-red);
+}
+  
+  /* Se quiser mais faixas */
+.bgYellow {
+    height: 33vh;
+    background-color: var(--main-bg-color-yellow);
+}
+
 .img_bife {
     width: 200px;
 }
+
+#carouselExampleIndicators {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    height: 400px; /* ou: aspect-ratio: 16/9; */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%; /* ou: aspect-ratio: 16/9; */
+    object-fit: cover; /* ou "cover" para preenchimento total */
+    background-color: #000; /* apenas se usar "contain" */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+
