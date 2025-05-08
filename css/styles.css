@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -16,7 +15,7 @@
     --main-bg-color-orange: #FFBB64;
     --main-bg-color-yellow: #FFEAA7;
     --main-text-color: #333;
-    --main-font: 'Times New Roman', sans-serif;
+    --main-font: 'Inter', sans-serif;
     --main-font-size: px;
     --main-padding: 10px;
     --main-margin: 10px;
@@ -88,8 +87,8 @@ nav ul li a h1 {
 .hero-section {
     display: flex;
     flex-direction: row;
-    height: 280px;
-    border: var(--main-border);
+    height: 255px;
+   /*  border: var(--main-border); */
 
     position: relative;
     z-index: 2;
@@ -121,12 +120,12 @@ nav ul li a h1 {
     padding: 2px;
 
     position: absolute;
-    bottom: 82px;
+    bottom: 55px;
     /* margin-top: 156px; */
 }
 
 .img_hero_main {
-    border: var(--main-border);
+   /*  border: var(--main-border); */
     width: 252px;
     height: 300px;
     bottom: 200px;
@@ -138,13 +137,25 @@ nav ul li a h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
-    padding-left: var(--main-padding);
-    padding-right: var(--main-padding);
+    /* border: 1px solid blue; */
+    font-size: 1rem;
+
+    margin-top: 0px;
 
     position: relative;
     z-index: 2;
 }
+
+.hours-section h2 {
+    font-family: 'Titan One', sans-serif;
+    color: white;
+}
+
+.img_bife {
+    /* border: var(--main-border); */
+    width: 170px;
+}
+
 
 /* BGS */
 .background-wrapper {
@@ -154,38 +165,73 @@ nav ul li a h1 {
     width: 100%;
     height: 100%;
     z-index: -10; /* Fica bem no fundo */
+
+    /* z-index: 50; */
 }
   
-  /* Cada faixa colorida ocupando parte da altura */
 .bgGreen {
     height: 36vh;
     background-color: var(--main-bg-color-green);
 }
   
 .bgRed {
-    height: 40vh;
+    height: 42vh;
     background-color: var(--main-bg-color-red);
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
   
-  /* Se quiser mais faixas */
 .bgYellow {
-    height: 33vh;
+    height: 70vh;
     background-color: var(--main-bg-color-yellow);
+
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+
+    bottom: 67px;
+    position: relative;
 }
 
-.img_bife {
-    width: 200px;
+.bgOrange {
+    height: 50vh;
+    background-color: var(--main-bg-color-orange);
+
+    position: relative;
+    bottom: 180px;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* MAIN ABOUT */
+
+.about-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    /* border: var(--main-border); */
+    font-size: 1rem;
+
+    position: relative;
+    z-index: 2;
+
+    margin: 20px;
+}
+
+.about-section p {
+    /* border: var(--main-border); */
+    text-align: start;
+    font-weight: medium;
+
+    text-align: center;
 }
 
 #carouselExampleIndicators {
-    max-width: 800px;
-    margin: 0 auto;
+    /* max-width: 800px; */
+    
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .carousel-inner {
-    height: 400px; /* ou: aspect-ratio: 16/9; */
+    height: 100% /* ou: aspect-ratio: 16/9; */
 }
 
 .carousel-item img {
@@ -193,6 +239,7 @@ nav ul li a h1 {
     height: 100%; /* ou: aspect-ratio: 16/9; */
     object-fit: cover; /* ou "cover" para preenchimento total */
     background-color: #000; /* apenas se usar "contain" */
+    border-radius: var(--main-border-radius);
 }
 
 .carousel-control-prev-icon,
@@ -200,6 +247,54 @@ nav ul li a h1 {
     background-color: rgba(0, 0, 0, 0.1);
     background-size: 100% 100%;
     border-radius: 50%;
+}
+
+/* FOOTER */
+footer {
+    /* border: var(--main-border); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 420px;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    padding: var(--main-padding);
+
+    list-style: none;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+    top: 20px;
+}
+
+.footer-middle {
+   /*  border: var(--main-border); */
+    
+    position: relative;
+    font-weight: bolder;
+    bottom: 50px;
+    right: 25px;
+}
+
+.footer-middle img {
+    display: inline-block;;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+    top: 40px;
 }
 
 
